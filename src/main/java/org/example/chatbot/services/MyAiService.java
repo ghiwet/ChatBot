@@ -1,6 +1,6 @@
 package org.example.chatbot.services;
 
-import io.smallrye.mutiny.Multi;
+import dev.langchain4j.service.MemoryId;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import dev.langchain4j.service.SystemMessage;
@@ -12,5 +12,5 @@ import io.quarkiverse.langchain4j.RegisterAiService;
 @ApplicationScoped
 public interface MyAiService {
 
-    String chat(@UserMessage String message);
+    String chat(@MemoryId String memoryId, @UserMessage String message);
 }
